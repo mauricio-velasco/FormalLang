@@ -1,0 +1,93 @@
+
+\documentclass[12pt, a4paper]{article}
+\usepackage{hyperref}
+\hypersetup{
+  colorlinks=true,
+  linkcolor=blue,
+  urlcolor=cyan,
+}
+\urlstyle{same}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+
+
+\newtheorem{theorem}{Teorema.}
+\newtheorem{lemma}[theorem]{Lema.}
+\newtheorem{corollary}[theorem]{Corolario.}
+\newtheorem{definition}[theorem]{Definici\'on:}
+\newtheorem{example}[theorem]{Ejemplo:}
+\newtheorem{problema}[theorem]{Problema:}
+\newtheorem{remark}[theorem]{Observaci\'on:}
+
+\usepackage{graphicx}
+\usepackage[spanish]{babel}
+%\usetheme{default}
+
+\newcommand{\pp}{\mathbb{P}}
+\newcommand{\zz}{\mathbb{Z}}
+\newcommand{\rr}{\mathbb{R}}
+\newcommand{\qq}{\mathbb{Q}}
+
+\usepackage{tikz, tikz-3dplot}
+
+\definecolor{cof}{RGB}{219,144,71}
+\definecolor{pur}{RGB}{186,146,162}
+\definecolor{greeo}{RGB}{91,173,69}
+\definecolor{greet}{RGB}{52,111,72}
+
+\date{}
+
+\begin{document}
+\title{PRÁCTICO 2 LENGUAJES FORMALES: Automatas finitos no-deterministas (AFNDs) y expresiones regulares.}
+\author{Mauricio Velasco}
+\maketitle{}
+
+\begin{enumerate}
+\item Sea $N$ un AFND y sea $w=y_1y_2\dots y_m$ una palabra. Complete de manera precisa la siguiente definición: $N$ \emph{acepta} a $w$ si... 
+
+\item Construya AFNDs con el número especificado de estados que reconozcan los siguientes lenguajes (usando el alfabeto $\{0,1\}$):
+\begin{enumerate}
+\item El lenguaje constituido por las palabras que terminan en $00$ usando TRES estados.
+\item El lenguaje $0^*1^*0^*$ usando TRES estados.
+\item El lenguaje constituido por las palabras que contienen al substring $\verb!0101!$ usando  CINCO estados.
+\item El lenguaje $0^*$ con UN estado.
+\end{enumerate}
+
+\item Defina expresiones regulares que generen los siguientes lenguajes en el alfabeto $\{0,1\}$:
+
+\begin{enumerate}
+\item Las palabras que empiezan con $1$ y terminan con $0$.
+\item Las palabras que contienen al menos tres unos.
+\item Las palabras de longitud a lo más cinco.
+\item Las palabras en las que toda posición impar es un uno.
+\item Las palabras que ó contienen un número par de ceros ó exáctamente dos unos.
+\end{enumerate}
+
+\item Realice las siguientes tareas:
+\begin{enumerate}
+\item Construya un AFND que reconozca el lenguaje $\left(01\cup 001\cup 010\right)^*$.
+\item Convierta esta AFND en un AFD equivalente siguiendo la prueba de la equivalencia vista en clase.
+\end{enumerate}
+
+\item Convierta las siguientes expresiones regulares en AFND:
+\begin{enumerate}
+\item $(0\cup 1)^*000(0\cup 1)^*$ 
+\item $\emptyset^*$
+\end{enumerate}
+
+\item Sea $B$ un lenguaje cualquiera sobre el alfabeto $\Sigma$. Demuestre que $B=B^*$ si y sólo si $BB=B$. 
+
+
+\item Utilice el pumping lemma para demostrar que los siguientes lenguajes NO SON regulares. Incluya una argumentación clara.
+\begin{enumerate}
+\item $A_1=\{0^n1^n2^n:n\in \mathbb{N}\}$ 
+\item $A_2=\{www|w\in \{a,b\}^*\}$
+\end{enumerate}
+
+
+
+\end{enumerate}
+\end{document}
