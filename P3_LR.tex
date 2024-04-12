@@ -1,0 +1,77 @@
+
+\documentclass[12pt, a4paper]{article}
+\usepackage{hyperref}
+\hypersetup{
+  colorlinks=true,
+  linkcolor=blue,
+  urlcolor=cyan,
+}
+\urlstyle{same}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+
+
+\newtheorem{theorem}{Teorema.}
+\newtheorem{lemma}[theorem]{Lema.}
+\newtheorem{corollary}[theorem]{Corolario.}
+\newtheorem{definition}[theorem]{Definici\'on:}
+\newtheorem{example}[theorem]{Ejemplo:}
+\newtheorem{problema}[theorem]{Problema:}
+\newtheorem{remark}[theorem]{Observaci\'on:}
+
+\usepackage{graphicx}
+\usepackage[spanish]{babel}
+%\usetheme{default}
+
+\newcommand{\pp}{\mathbb{P}}
+\newcommand{\zz}{\mathbb{Z}}
+\newcommand{\rr}{\mathbb{R}}
+\newcommand{\qq}{\mathbb{Q}}
+
+\usepackage{tikz, tikz-3dplot}
+
+\definecolor{cof}{RGB}{219,144,71}
+\definecolor{pur}{RGB}{186,146,162}
+\definecolor{greeo}{RGB}{91,173,69}
+\definecolor{greet}{RGB}{52,111,72}
+\date{}
+
+
+\begin{document}
+\title{PRÁCTICO 3 LENGUAJES FORMALES: GNFAs y el pumping Lemma.}
+\author{Mauricio Velasco}
+\maketitle{}
+
+\begin{enumerate}
+\item Utilice el pumping lemma para demostrar que los siguientes lenguajes NO SON regulares. Incluya una argumentación clara.
+\begin{enumerate}
+\item $A_1=\{0^n1^n2^n:n\in \mathbb{N}\}$ 
+\item $A_2=\{www|w\in \{a,b\}^*\}$
+\item $A_3=\{a^{2^n}:n\in \mathbb{N}\}$
+\end{enumerate}
+
+\item Para un string $w_1\dots w_n$ la reversa es $w_nw_{n-1}\dots w_2w_1$. Demuestre que un lenguaje $A$ es regular si y solo si el conjunto de sus reversas es tambien regular.
+
+\item Demuestre que los siguientes lenguajes no son regulares:
+\begin{enumerate}
+\item $\{0^m1^n: m\neq n\}$
+\item $\{w\in \{0,1\}^* \text{que NO son palabras capicua (a.k.a. palindromas)}\}$
+\end{enumerate}
+
+\item Escriba formalmente las siguientes:
+\begin{enumerate}
+\item Definición de GNFA.
+\item Complete: El GNFA $M$ acepta la palabra $w$ si...
+\item Complete: Para todo GNFA existe una expresión regular tal que...
+\item De un ejemplo de un GNFA con tres estados y construya la expresión regular del lenguaje que este acepta, obtenida eliminando el estado que no es de inicio o aceptación.
+\end{enumerate}
+
+
+\item Sea $L\subseteq \Sigma^*$ un lenguaje. Decimos que $x$ y $y$ puden distinguirse mediante $L$ si existe un $z\in \Sigma^*$ tal que ex\áctamente uno de $xz$ y $yz$ estan en $L$. Para $x,y\in \Sigma^*$ definimos $x\sim y$ si $x$ y $y$ NO PUEDEN distinguirse mediante $L$. Demuestre que $\sim$ es una relación de equivalencia (es decir es reflexiva, simétrica y transitiva).
+
+
+
+\end{document}
