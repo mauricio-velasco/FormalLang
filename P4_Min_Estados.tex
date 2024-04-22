@@ -1,0 +1,65 @@
+
+\documentclass[12pt, a4paper]{article}
+\usepackage{hyperref}
+\hypersetup{
+  colorlinks=true,
+  linkcolor=blue,
+  urlcolor=cyan,
+}
+\urlstyle{same}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+
+
+\newtheorem{theorem}{Teorema.}
+\newtheorem{lemma}[theorem]{Lema.}
+\newtheorem{corollary}[theorem]{Corolario.}
+\newtheorem{definition}[theorem]{Definici\'on:}
+\newtheorem{example}[theorem]{Ejemplo:}
+\newtheorem{problema}[theorem]{Problema:}
+\newtheorem{remark}[theorem]{Observaci\'on:}
+
+\usepackage{graphicx}
+\usepackage[spanish]{babel}
+%\usetheme{default}
+
+\newcommand{\pp}{\mathbb{P}}
+\newcommand{\zz}{\mathbb{Z}}
+\newcommand{\rr}{\mathbb{R}}
+\newcommand{\qq}{\mathbb{Q}}
+
+\usepackage{tikz, tikz-3dplot}
+
+\definecolor{cof}{RGB}{219,144,71}
+\definecolor{pur}{RGB}{186,146,162}
+\definecolor{greeo}{RGB}{91,173,69}
+\definecolor{greet}{RGB}{52,111,72}
+\date{}
+
+
+\begin{document}
+\title{PRÁCTICO 4 LENGUAJES FORMALES: Minimización de estados.}
+\author{Mauricio Velasco}
+\maketitle{}
+
+\begin{enumerate} 
+\item Sea $\Sigma =\{a,b\}$. Encuentre las clases de equivalencia de la relación $\simeq_L$ para los siguientes lenguajes $L\subseteq \Sigma^*$:
+\begin{enumerate}
+\item $L=\{x\in \Sigma^*: x\text{ contiene al menos una ocurrencia de aababa}\}$
+\item $L=\{xx:x\in \Sigma^*\}$
+\end{enumerate}
+\item Para cada uno de los lenguajes del ejercicio anterior encuentre el automata óptimo que acepta a $L$.
+
+\item Una palabra $z\in \Sigma^*$ se llama \emph{libre de cuadrados} si NO puede escribirse como $z=uvvw$ para $u,v,w\in \Sigma^*$ con $v\neq \epsilon$. (por ejemplo $perro$ y $papa$ no son palabras libres de cuadrados). Demuestre que si $|\Sigma|\geq 2$ entonces el lenguaje que consiste de las palabras libres de cuadrados en $\Sigma^*$ NO es un lenguaje regular.
+
+\item Demuestre que las expresiones regulares $aa(a\cup b)^*\cup (bb)^*a^*$ y $(ab\cup ba\cup a)^*$ NO describen el mismo lenguaje de dos maneras. Aplicando sobre ellas un algoritmo general y encontrando una cadena generada por una y no por la otra.
+
+
+ 
+\end{enumerate}
+
+
+\end{document}
