@@ -1,0 +1,100 @@
+
+\documentclass[12pt, a4paper]{article}
+\usepackage{hyperref}
+\hypersetup{
+  colorlinks=true,
+  linkcolor=blue,
+  urlcolor=cyan,
+}
+\urlstyle{same}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+
+
+\newtheorem{theorem}{Teorema.}
+\newtheorem{lemma}[theorem]{Lema.}
+\newtheorem{corollary}[theorem]{Corolario.}
+\newtheorem{definition}[theorem]{Definici\'on:}
+\newtheorem{example}[theorem]{Ejemplo:}
+\newtheorem{problema}[theorem]{Problema:}
+\newtheorem{remark}[theorem]{Observaci\'on:}
+
+\usepackage{graphicx}
+\usepackage[spanish]{babel}
+%\usetheme{default}
+
+\newcommand{\pp}{\mathbb{P}}
+\newcommand{\zz}{\mathbb{Z}}
+\newcommand{\rr}{\mathbb{R}}
+\newcommand{\qq}{\mathbb{Q}}
+
+\usepackage{tikz, tikz-3dplot}
+
+\definecolor{cof}{RGB}{219,144,71}
+\definecolor{pur}{RGB}{186,146,162}
+\definecolor{greeo}{RGB}{91,173,69}
+\definecolor{greet}{RGB}{52,111,72}
+\date{}
+
+
+\begin{document}
+\title{PRÁCTICO 5 LENGUAJES FORMALES: Grámaticas libres de contexto (CFGs) y Automatas de pila (PDAs)}
+\author{Mauricio Velasco}
+\maketitle{}
+
+\begin{enumerate} 
+
+\item Sea $\Sigma=\{a,b,(,),\cup,*,\emptyset\}$. Construya un CFG que genere todas las cadenas de $\Sigma^*$ que sean expresiones regulares sobre $\{a,b\}$.
+
+\item Sea $V=\{a,b,S,A,B\}$, $\Sigma =\{a,b\}$ y defina $R$ mediante las reglas 
+\[
+\begin{cases}
+S\rightarrow aB\\
+S\rightarrow bA\\
+A\rightarrow a\\
+A\rightarrow aS\\
+A\rightarrow BAA\\
+B\rightarrow b\\
+B\rightarrow bS\\
+B\rightarrow ABB\\
+\end{cases}
+\]
+\begin{enumerate}
+\item Demuestre que $ababba\in L(G)$ 
+\item Muestre que $L(G)$ es el conjunto de todas las cadenas no vacias que tienen la misma cantidad de ocurrencias de $a$ y de $b$.
+\end{enumerate}
+
+\item Demuestren que el conjunto de lenguajes generados por algun CFG (o equiv. aceptados por algun PDA) cumple:
+\begin{enumerate}
+\item Es cerrada bajo las operaciones de unión, concatenación y estrella de Kleene.
+\item No es cerrada ni bajo intersección ni bajo complementos (Nota: Esto requiere construir contraejemplos explícitos y usar alguna versión del pumping lemma para CFGs).
+\end{enumerate}
+
+
+
+
+\item Considere el PDA $M$ con
+$K=\{s,f\}$, $\Sigma=\{a,b\}$, $\Gamma=\{a\}$ y con $\Delta$ dado por  
+\[\{[(s,a,e),(s,a)], [(s,b,e),(s,a)],[(s,a,e),(f,e)],[(f,a,a),(f,e)],[(f,b,a),(f,e)]\}\]
+\begin{enumerate}
+\item Escriba todas las posibles sucesiones de transiciones de $M$ con input $aba$.
+\item Demuestre que $aba,aa,bb\not\in  L(M)$ pero $baa,bab,baaa\in L(M)$.
+\item Describa $L(M)$ en palabras. 
+\end{enumerate}
+\item Construya PDAs que acepten cada uno de los siguientes lenguajes del alfabeto $\Sigma=\{a,b\}$:
+\begin{enumerate}
+\item El lenguaje $\{a^mb^n: m\leq n\leq 2m, m\in \mathbb{N}\}$
+\item El lenguaje $\{w\in \Sigma^*: w=w^R\}$ donde $w^R$ denota la palabra reversa.
+\item El lenguaje 
+\[\left\{w\in \Sigma^*:\text{$w$ tiene el doble de $b$'s que de $a$'s}\right\}\]
+\end{enumerate}
+
+\item Sea $M$ un PDA. El \emph{lenguaje aceptado por $M$ con estado final $f_0\in F$} se define como
+\[L_{f_0}(M):=\{w\in \Sigma^*: (s,w,\epsilon)\vdash (f_0,\epsilon,\alpha)\text{ para algún $\alpha\in \Gamma^*$}\}\]
+Demuestre que existe un PDA $M'$ con $L(M')=L(M_{f_0})$.
+
+
+\end{document}
