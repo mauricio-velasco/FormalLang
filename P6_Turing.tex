@@ -1,0 +1,77 @@
+
+\documentclass[12pt, a4paper]{article}
+\usepackage{hyperref}
+\hypersetup{
+  colorlinks=true,
+  linkcolor=blue,
+  urlcolor=cyan,
+}
+\urlstyle{same}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+
+
+\newtheorem{theorem}{Teorema.}
+\newtheorem{lemma}[theorem]{Lema.}
+\newtheorem{corollary}[theorem]{Corolario.}
+\newtheorem{definition}[theorem]{Definici\'on:}
+\newtheorem{example}[theorem]{Ejemplo:}
+\newtheorem{problema}[theorem]{Problema:}
+\newtheorem{remark}[theorem]{Observaci\'on:}
+
+\usepackage{graphicx}
+\usepackage[spanish]{babel}
+%\usetheme{default}
+
+\newcommand{\pp}{\mathbb{P}}
+\newcommand{\zz}{\mathbb{Z}}
+\newcommand{\rr}{\mathbb{R}}
+\newcommand{\qq}{\mathbb{Q}}
+
+\usepackage{tikz, tikz-3dplot}
+
+\definecolor{cof}{RGB}{219,144,71}
+\definecolor{pur}{RGB}{186,146,162}
+\definecolor{greeo}{RGB}{91,173,69}
+\definecolor{greet}{RGB}{52,111,72}
+\date{}
+
+
+\begin{document}
+\title{PRÁCTICO 6 LENGUAJES FORMALES: Máquinas de Turing}
+\author{Mauricio Velasco}
+\maketitle{}
+\begin{enumerate}
+\item \begin{enumerate}
+\item Diseñe y escriba una máquina de Turing que escanea hacia la derecha hasta que encuentra dos $a$'s consecutivas y luego se detiene. El alfabeto de la máquina debe ser $\Sigma =\{a,b,\cup,\triangle\}$ y debe dar la descripción de la máquina en completo detalle (como tupla).
+\item Escriba las configuraciones que ocurren al ejecutar su máquina con input $\cup bbabaa$.
+\end{enumerate}
+
+\item Construya una máquina de Turing (usando nuestra notación abreviada) que calcule la funcion $f: \{a,b\}^*\rightarrow \{a,b\}^*$ dada por $f(w)=ww^R$ donde $w^R$ significa la palabra reversa a $w$. Muestre la ejecución de la misma en una cadena representativa.
+
+
+\item Describa una máquina de Turing que semidecida el lenguaje $a^*ba^*b$.
+
+\item (\emph{Autómatas con dos stacks}) \begin{enumerate}
+\item Defina formalmente un automata que sea un \emph{pushdown automata con dos stacks}, especificando definición, configuraciones y cómputo. Defina formalmente lo que significa que esta máquina \emph{acepte} un lenguaje.
+\item Demuestre que un lenguaje es recursivo si y solo si es aceptado por un \emph{pushdown automata con dos stacks}.
+\end{enumerate}
+\item Encuentre gramáticas que generen los siguientes lenguajes:
+\begin{enumerate}
+\item $L=\{ww: w\in \{a,b\}^*\}$
+\item $L=\{a^{2^n}: n\in\mathbb{N}\}$
+\item $L=\{a^{n^2}: n\in\mathbb{N}\}$
+\end{enumerate}
+
+\end{enumerate}
+
+
+\end{enumerate}
+
+
+
+
+\end{document}
